@@ -154,7 +154,7 @@
 
 
 }
--(IBAction)plus:(id)sender{
+-(IBAction)subtract:(id)sender{
     
     if (runningTotal == 0) {
         runningTotal = selectNumber;
@@ -184,12 +184,11 @@
     
     method = 3;
     selectNumber = 0;
-
-   
     
-
+    
+    
 }
--(IBAction)subtract:(id)sender{
+-(IBAction)plus:(id)sender{
     
     if (runningTotal == 0) {
         runningTotal = selectNumber;
@@ -221,8 +220,10 @@
     selectNumber = 0;
 
    
+    
 
 }
+
 -(IBAction)equals:(id)sender{
     
     if (runningTotal == 0) {
@@ -253,7 +254,7 @@
     
     method = 0;
     selectNumber = 0;
-    screen.text = [NSString stringWithFormat:@"%f.2", runningTotal];
+    screen.text = [NSString stringWithFormat:@"%.2f", runningTotal];
 
     
    
